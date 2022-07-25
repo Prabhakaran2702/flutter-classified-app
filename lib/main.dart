@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_classifiedappclone/Constants/constants.dart';
 import 'package:flutter_classifiedappclone/UI/Widgets/splash_screen.dart';
-import 'package:flutter_classifiedappclone/UI/main_ui.dart';
+import 'package:flutter_classifiedappclone/UI/screens/main_ui.dart';
+import 'package:flutter_classifiedappclone/theme.dart';
+import 'package:flutter_classifiedappclone/ui/screens/sign_in/sign_in_screen.dart';
+import 'constants.dart';
+
 
 
 
@@ -18,12 +21,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
 
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Classified App Clone',
-      theme: ThemeData(primaryColor: Colors.orange[200]),
+      title: 'Super App',
+      theme:  theme(),
       routes: <String, WidgetBuilder>{
         MAIN_UI: (BuildContext context) => MainUI(),
         SPLASH_SCREEN: (BuildContext context) => AnimatedSplashScreen(),
-
+        SIGN_IN: (BuildContext context) => SignInScreen(),
 
       },
       initialRoute: SPLASH_SCREEN,
